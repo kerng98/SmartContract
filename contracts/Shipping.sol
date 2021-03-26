@@ -10,39 +10,44 @@ contract Shipping{
         Status constant defaultChoice = Status.Pending;
      
     struct package {
-        string id;
         string name;
         string from;
         string to;
+        uint id;
         uint timestarted;
         uint timereceived;
     }
     
     //Fonction déclenché quand le colis est expédié
-    event Shipped(
+    //event Pending(
 
-    )
+    //)
+
+    //Fonction déclenché quand le colis est expédié
+    //event Shipped(
+
+    //)
     
     //Evenement declencher lorsque le colis est livré
-    event Delivred(
+    //event Delivred(
 
-    )
+    //)
     
     //Fonction changeant létat de Status pour dire que la commande est en attente
     function _state_pending() public {
-        choix = Status.Pending;
-        return choix
+        choice = Status.Pending;
+        return choice;
     }
     
     //Fonction changeant létat de Status pour dire que la commande est expédiée
     function _state_shipped() public {
-        choix = Status.Shipped;
-        return choix
+        choice = Status.Shipped;
+        return choice;
     }
     
     //Fonction changeant létat de Status pour dire que la commande est en cours livré
     function _state_delivered() public {
-        choix = Status.Delivered;
-        return choix
+        choice = Status.Delivered;
+        return choice;
     }
 }
