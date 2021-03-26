@@ -19,19 +19,13 @@ contract Shipping{
     }
     
     //Fonction déclenché quand le colis est expédié
-    //event Pending(
-
-    //)
+    event Pending(id, Status);
 
     //Fonction déclenché quand le colis est expédié
-    //event Shipped(
-
-    //)
+    event Shipping(id, Status);
     
     //Evenement declencher lorsque le colis est livré
-    //event Delivred(
-
-    //)
+    event Delivered(id, Status);
     
     //Fonction changeant létat de Status pour dire que la commande est en attente
     function _state_pending() public {
