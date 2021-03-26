@@ -17,26 +17,31 @@ contract Shipping{
         uint timestarted;
         uint timereceived;
     }
-
+    
+    //Fonction déclenché quand le colis est expédié
     event Shipped(
 
     )
-
+    
+    //Evenement declencher lorsque le colis est livré
     event Delivred(
 
     )
-
-    function checkstate() public {
+    
+    //Fonction changeant létat de Status pour dire que la commande est en attente
+    function _state_pending() public {
         choix = Status.Pending;
         return choix
     }
     
-    function checkstate() public {
+    //Fonction changeant létat de Status pour dire que la commande est expédiée
+    function _state_shipped() public {
         choix = Status.Shipped;
         return choix
     }
-
-    function checkstate() public {
+    
+    //Fonction changeant létat de Status pour dire que la commande est en cours livré
+    function _state_delivered() public {
         choix = Status.Delivered;
         return choix
     }
