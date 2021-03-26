@@ -8,5 +8,36 @@ contract Shipping{
     enum Status{Pending, Shipped, Delivered}
         Status choice;
         Status constant defaultChoice = Status.Pending;
+     
+    struct package {
+        string id;
+        string name;
+        string from;
+        string to;
+        uint timestarted;
+        uint timereceived;
+    }
 
+    event Shipped(
+
+    )
+
+    event Delivred(
+
+    )
+
+    function checkstate() public {
+        choix = Status.Pending;
+        return choix
+    }
+    
+    function checkstate() public {
+        choix = Status.Shipped;
+        return choix
+    }
+
+    function checkstate() public {
+        choix = Status.Delivered;
+        return choix
+    }
 }
